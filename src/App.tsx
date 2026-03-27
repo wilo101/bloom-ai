@@ -6,6 +6,12 @@ import Gallery from './pages/Gallery';
 import Generation from './pages/Generation';
 import Structures from './pages/Structures';
 
+function routerBasename(): string | undefined {
+  const base = import.meta.env.BASE_URL;
+  if (base === '/' || base === '') return undefined;
+  return base.endsWith('/') ? base.slice(0, -1) : base;
+}
+
 function Background() {
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -52,7 +58,7 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename()}>
       <div className="relative min-h-screen w-full bg-black text-white font-sans overflow-hidden">
         <Background />
 

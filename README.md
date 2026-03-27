@@ -4,6 +4,26 @@
 
 Bloom AI is a generative AI–oriented web app: gallery, AI generation, and 3D structures—built with a dark space-themed UI, liquid glass morphism, and a full-screen video background.
 
+## Screenshots
+
+### AI Generation
+
+![AI Generation — prompt, style, and aspect ratio](./docs/generation.png)
+
+Enter a botanical-style prompt, pick a look (e.g. hyper-realistic) and aspect ratio, then generate; the right panel shows the result when ready.
+
+### Artistic Gallery
+
+![Artistic Gallery — grid of study images](./docs/gallery.png)
+
+Browse curated studies in a dark grid with frosted cards—good for skimming high-quality reference imagery.
+
+### 3D Structures
+
+![3D Structures — interactive viewer](./docs/structures.png)
+
+Use the viewer to rotate and zoom a neural-style floral asset, see the active `.obj` name, and download the file when you need it offline.
+
 ## 📁 Project layout
 
 ```text
@@ -16,8 +36,9 @@ bloom-ai/
 ├── index.html
 ├── vite.config.ts
 ├── tsconfig.json
+├── docs/               # Extra README screenshots
 ├── package.json
-├── screenshot.png      # README / hero preview
+├── screenshot.png      # Hero / landing preview
 └── README.md
 ```
 

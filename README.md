@@ -8,7 +8,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-**[Live site](https://wilo101.github.io/bloom-ui/)** · **[Source](https://github.com/wilo101/bloom-ui)**
+**[Live site](https://wilo101.github.io/bloom/)** · **[Source](https://github.com/wilo101/bloom)**
 
 ---
 

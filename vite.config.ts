@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
 
-const repoSlug = process.env.GH_REPO_NAME || 'bloom-ui';
+const repoSlug = process.env.GH_REPO_NAME || 'bloom';
 const githubPagesBase =
   process.env.GITHUB_PAGES === 'true' ? `/${repoSlug}/` : '/';
 

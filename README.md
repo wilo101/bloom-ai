@@ -2,29 +2,29 @@
 
 ![Bloom AI — landing preview](./screenshot.png)
 
-Bloom AI is a generative AI–oriented web app: gallery, AI generation, and 3D structures—built with a dark space-themed UI, liquid glass morphism, and a full-screen video background.
+**Bloom AI** is a **front-end / UI–UX portfolio piece** themed around a fictional “generative botanical” product. There is **no backend, no real AI, and no live data**—screens are static layouts and placeholder interactions for presentation only.
 
 **Live site:** [https://wilo101.github.io/bloom-ai/](https://wilo101.github.io/bloom-ai/)
 
 ## Screenshots
 
-### AI Generation
+### AI Generation (UI mock)
 
 ![AI Generation — prompt, style, and aspect ratio](./docs/generation.png)
 
-Enter a botanical-style prompt, pick a look (e.g. hyper-realistic) and aspect ratio, then generate; the right panel shows the result when ready.
+Mock flow: prompt field, style/ratio controls, and an empty preview area—layout and styling only, not connected to a model or API.
 
-### Artistic Gallery
+### Artistic Gallery (UI mock)
 
 ![Artistic Gallery — grid of study images](./docs/gallery.png)
 
-Browse curated studies in a dark grid with frosted cards—good for skimming high-quality reference imagery.
+Grid of sample imagery inside cards; demonstrates composition, typography, and dark-theme gallery patterns.
 
-### 3D Structures
+### 3D Structures (UI mock)
 
 ![3D Structures — interactive viewer](./docs/structures.png)
 
-Use the viewer to rotate and zoom a neural-style floral asset, see the active `.obj` name, and download the file when you need it offline.
+Viewer-style panel with copy and controls as a design concept; no real 3D engine or file download pipeline.
 
 ## 📁 Project layout
 
@@ -47,12 +47,12 @@ bloom-ai/
 └── README.md
 ```
 
-## ✨ Features
+## ✨ UI highlights (front-end only)
 
-- **Liquid Glass Morphism:** Custom CSS for a stunning, frosted glass look with complex gradients and borders.
-- **Dynamic Background Blur:** The video background smoothly blurs with animations when navigating away from the home page.
-- **Animated Transitions:** Seamless page routing using `motion` (Framer Motion) and `react-router-dom`.
-- **Responsive Design:** A beautiful two-panel split layout on desktop that gracefully adapts to mobile screens.
+- **Liquid glass / frosted panels:** Gradients, borders, and transparency for a premium dark layout.
+- **Dynamic background blur:** Video backdrop eases into blur when leaving the home route.
+- **Motion & routing:** Page transitions with Motion and React Router.
+- **Responsive layout:** Split hero and inner pages adapt for smaller viewports.
 
 ## 🛠️ Tech Stack
 

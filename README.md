@@ -40,7 +40,7 @@ bloom-ai/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/bloom-ai.git
+   git clone https://github.com/wilo101/bloom-ai.git
    cd bloom-ai
    ```
 

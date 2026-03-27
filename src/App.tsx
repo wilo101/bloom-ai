@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
+import { ConceptBadge } from './components';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Generation from './pages/Generation';
@@ -66,6 +67,7 @@ export default function App() {
         <div className="relative z-10 w-full h-screen overflow-y-auto">
           <AnimatedRoutes />
         </div>
+        <ConceptBadge />
       </div>
     </BrowserRouter>
   );

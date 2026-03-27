@@ -35,6 +35,7 @@ A two-column **editorial layout**: primary copy and controls on one side, a tall
 ## What this repo exercises (front end)
 
 - **Visual language** — frosted glass, edge light, dark-base contrast, botanical–celestial mood without clipart cliché.
+- **Component architecture** — reusable primitives (`GlassPanel`, `IconCircle`, `PageShell`, `PageHeader`, `FeatureCard`) with typed props; pages compose, not duplicate.
 - **Motion as UX** — route-aware background blur; transitions that respect **AnimatePresence** and reading order.
 - **Information design** — each route is a **self-contained chapter**: hero, ingress, internal rhythm.
 - **Responsive posture** — layouts that scale from immersive desktop splits to narrower viewports without collapsing hierarchy.
@@ -46,11 +47,15 @@ A two-column **editorial layout**: primary copy and controls on one side, a tall
 
 ```text
 bloom-ai/
-├── .github/workflows/  # GitHub Pages deploy
+├── .github/workflows/      # GitHub Pages deploy
 ├── public/
-├── scripts/            # SPA 404 fallback after build
+├── scripts/                # SPA 404 fallback after build
 ├── src/
-│   ├── pages/
+│   ├── components/
+│   │   ├── layout/         # PageShell, PageHeader
+│   │   ├── ui/             # GlassPanel, IconCircle, NavPill, FeatureCard, ConceptBadge
+│   │   └── index.ts        # barrel exports
+│   ├── pages/              # Home, Gallery, Generation, Structures
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── index.css
@@ -65,16 +70,16 @@ bloom-ai/
 
 ---
 
-## Stack (tools I used)
+## Stack — why these choices
 
-| Layer | Choice |
-|--------|--------|
-| UI runtime | [React 19](https://react.dev/) |
-| Build | [Vite](https://vitejs.dev/) |
-| Styling | [Tailwind CSS v4](https://tailwindcss.com/) |
-| Routing | [React Router](https://reactrouter.com/) |
-| Motion | [Motion](https://motion.dev/) |
-| Icons | [Lucide React](https://lucide.dev/) |
+| Layer | Choice | Why |
+|--------|--------|-----|
+| UI runtime | [React 19](https://react.dev/) | Component model fits the glass-panel language — each surface is a composable `<GlassPanel>` with variant/radius props. |
+| Build | [Vite](https://vitejs.dev/) | Near-instant HMR during design iteration; trivial `base` path config for GitHub Pages. |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com/) | Utility-first keeps the visual system co-located with markup; `@theme` tokens enforce a single type + radius scale. |
+| Routing | [React Router](https://reactrouter.com/) | `useLocation` drives both route transitions and the background-blur choreography in one place. |
+| Motion | [Motion](https://motion.dev/) | `AnimatePresence` + blur/opacity keyframes give routes a spatial feel without a page reload. |
+| Icons | [Lucide React](https://lucide.dev/) | Tree-shakeable, consistent 24 × 24 stroke set that matches the thin-line aesthetic. |
 
 ---
 

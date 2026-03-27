@@ -32,8 +32,8 @@ export default function Structures() {
               <Rotate3D size={32} className="text-white" />
             </div>
             <div className="text-center liquid-glass p-6 rounded-3xl max-w-md">
-              <h3 className="text-xl font-medium mb-2">Interactive Viewer</h3>
-              <p className="text-sm text-white/60">Drag to rotate the neural-generated floral structure. Pinch to zoom.</p>
+              <h3 className="text-xl font-medium mb-2">Viewer Stage</h3>
+              <p className="text-sm text-white/60">Spatial chrome and controls — layout concept for a 3D asset browser.</p>
             </div>
           </div>
 

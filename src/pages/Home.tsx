@@ -31,8 +31,8 @@ export default function Home() {
         <div className="flex-1 flex flex-col items-center justify-center text-center mt-12 mb-12">
           <img src="https://picsum.photos/seed/bloomlogo/80/80" alt="Bloom Logo Large" className="w-20 h-20 rounded-full mb-8 animate-pulse" />
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-[-0.05em] text-white leading-[1.1] mb-8 max-w-2xl">
-            Innovating the <br />
-            <span className="font-serif italic text-white/80">spirit of bloom</span> AI
+            Designing the <br />
+            <span className="font-serif italic text-white/80">surface of bloom</span> AI
           </h1>
           
           <Link to="/generation" className="liquid-glass-strong rounded-full pl-6 pr-2 py-2 flex items-center gap-4 hover:scale-105 active:scale-95 transition-transform mb-10">
@@ -51,13 +51,13 @@ export default function Home() {
 
         {/* Bottom Quote */}
         <div className="mt-auto flex flex-col items-center text-center gap-4">
-          <span className="text-xs tracking-widest uppercase text-white/50">Visionary Design</span>
+          <span className="text-xs tracking-widest uppercase text-white/50">Front-End Craft</span>
           <p className="text-lg md:text-xl text-white/90 max-w-md">
-            "We imagined a <span className="font-serif italic text-white">realm</span> with no ending."
+            "Hierarchy, contrast, and <span className="font-serif italic text-white">pacing</span>—the things that outlast trends."
           </p>
           <div className="flex items-center gap-4 w-full max-w-xs opacity-60">
             <div className="h-[1px] flex-1 bg-white/30"></div>
-            <span className="text-[10px] tracking-widest uppercase">Marcus Aurelio</span>
+            <span className="text-[10px] tracking-widest uppercase">Design Philosophy</span>
             <div className="h-[1px] flex-1 bg-white/30"></div>
           </div>
         </div>
@@ -99,8 +99,8 @@ export default function Home() {
             </div>
             <span className="text-xs text-white/60">+2k joined</span>
           </div>
-          <h3 className="text-sm font-medium text-white mb-1">Enter our ecosystem</h3>
-          <p className="text-xs text-white/50">Connect with visionary creators worldwide.</p>
+          <h3 className="text-sm font-medium text-white mb-1">Built for portfolios</h3>
+          <p className="text-xs text-white/50">A showcase of layout, motion, and visual rhythm.</p>
         </div>
 
         {/* Bottom Feature Section */}
@@ -111,8 +111,8 @@ export default function Home() {
                 <Wand2 size={14} />
               </div>
               <div>
-                <h4 className="text-sm font-medium text-white">Processing</h4>
-                <p className="text-xs text-white/50 mt-1">Real-time neural rendering</p>
+                <h4 className="text-sm font-medium text-white">Visual System</h4>
+                <p className="text-xs text-white/50 mt-1">Glass surfaces & motion design</p>
               </div>
             </Link>
             <Link to="/gallery" className="flex-1 liquid-glass rounded-3xl p-5 flex flex-col gap-3 hover:scale-105 transition-transform cursor-pointer">
@@ -120,8 +120,8 @@ export default function Home() {
                 <BookOpen size={14} />
               </div>
               <div>
-                <h4 className="text-sm font-medium text-white">Growth Archive</h4>
-                <p className="text-xs text-white/50 mt-1">Historical botanical data</p>
+                <h4 className="text-sm font-medium text-white">Image Grid</h4>
+                <p className="text-xs text-white/50 mt-1">Responsive card composition</p>
               </div>
             </Link>
           </div>
@@ -129,8 +129,8 @@ export default function Home() {
           <Link to="/structures" className="liquid-glass rounded-3xl p-4 flex items-center gap-4 hover:scale-105 transition-transform cursor-pointer">
             <img src="https://picsum.photos/seed/flower/96/64" alt="Flower thumbnail" className="w-24 h-16 rounded-2xl object-cover" />
             <div className="flex-1">
-              <h4 className="text-sm font-medium text-white">Advanced Plant Sculpting</h4>
-              <p className="text-xs text-white/50 mt-1">Generate complex 3D floral structures with simple text prompts.</p>
+              <h4 className="text-sm font-medium text-white">Viewer Chrome</h4>
+              <p className="text-xs text-white/50 mt-1">Spatial layout, controls bar, and instrumentation styling.</p>
             </div>
             <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
               <Plus size={16} />

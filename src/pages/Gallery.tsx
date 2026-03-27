@@ -19,7 +19,7 @@ export default function Gallery() {
             </div>
             <span>Back</span>
           </Link>
-          <h2 className="text-2xl font-medium tracking-tight">Artistic <span className="font-serif italic text-white/80">Gallery</span></h2>
+          <h2 className="text-2xl font-medium tracking-tight">Visual <span className="font-serif italic text-white/80">Gallery</span></h2>
           <div className="w-24"></div> {/* Spacer for centering */}
         </nav>
         
@@ -31,7 +31,7 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
               </div>
               <div className="flex items-center justify-between px-2">
-                <span className="text-sm font-medium">Floral Study {i}</span>
+                <span className="text-sm font-medium">Study {i}</span>
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                   <ImageIcon size={14} />
                 </div>

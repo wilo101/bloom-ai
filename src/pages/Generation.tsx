@@ -29,7 +29,7 @@ export default function Generation() {
               <label className="text-sm font-medium text-white/80">Prompt</label>
               <textarea 
                 className="w-full bg-transparent border-none outline-none resize-none text-lg placeholder:text-white/30 min-h-[150px]"
-                placeholder="Describe your botanical vision... e.g., 'A bioluminescent orchid made of crystalline glass'"
+                placeholder="Type anything—this is a layout demo, not a live model."
               ></textarea>
             </div>
             
@@ -54,7 +54,7 @@ export default function Generation() {
 
             <button className="mt-auto liquid-glass-strong rounded-full py-4 flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-transform">
               <Sparkles size={18} />
-              <span className="font-medium text-lg">Generate Vision</span>
+              <span className="font-medium text-lg">Generate</span>
             </button>
           </div>
 
@@ -62,7 +62,7 @@ export default function Generation() {
             <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-4">
               <Wand2 size={24} className="text-white/30" />
             </div>
-            <p className="text-white/50 max-w-xs">Your generated botanical masterpiece will appear here.</p>
+            <p className="text-white/50 max-w-xs">Output canvas — reserved for the result preview area.</p>
           </div>
         </div>
       </div>

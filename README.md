@@ -4,7 +4,7 @@
 
 Bloom AI is a generative AI–oriented web app: gallery, AI generation, and 3D structures—built with a dark space-themed UI, liquid glass morphism, and a full-screen video background.
 
-**Live:** [wilo101.github.io/bloom-ai](https://wilo101.github.io/bloom-ai/) — after the workflow runs once, set **Settings → Pages → Deploy from a branch** to **gh-pages** / **/(root)**.
+**Live site:** [https://wilo101.github.io/bloom-ai/](https://wilo101.github.io/bloom-ai/)
 
 ## Screenshots
 

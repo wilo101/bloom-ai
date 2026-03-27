@@ -31,7 +31,7 @@ export default function Home() {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-[-0.05em] text-white leading-[1.1] mb-8 max-w-2xl">
             Designing the <br />
-            <span className="font-serif italic text-white/80">surface of bloom</span> AI
+            <span className="font-serif italic text-white/80">surface of bloom</span>
           </h1>
 
           <Link
@@ -44,7 +44,7 @@ export default function Home() {
 
           <div className="flex flex-wrap items-center justify-center gap-3">
             <NavPill to="/gallery" label="Visual Gallery" />
-            <NavPill to="/generation" label="AI Generation" />
+            <NavPill to="/generation" label="Generation" />
             <NavPill to="/structures" label="3D Structures" />
           </div>
         </div>

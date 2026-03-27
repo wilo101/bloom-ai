@@ -1,88 +1,97 @@
-# Bloom AI
+# Bloom
 
-![Bloom AI — landing](./screenshot.png)
+**A front-end concept — botanical dark-glass UI, motion, and multi-route product surfaces.**
 
-I build **front-end experiences**: type, space, motion, and glass-deep surfaces that still read clearly when the novelty wears off. This repository is one continuous rhythm—a single product narrative told through **UI, UX, and implementation detail**, not through backend wiring.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6-646cff?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-The brief is botanical and luminous: dark atmospheres, soft glow, typography that carries weight. The goal is an interface that **feels like it could still make sense fifty years from now**—not because the pixels are frozen in time, but because **hierarchy, contrast, and pacing** are treated as the real deliverables.
-
-**Live:** [https://wilo101.github.io/bloom-ai/](https://wilo101.github.io/bloom-ai/)
+**[Live site](https://wilo101.github.io/bloom-ui/)** · **[Source](https://github.com/wilo101/bloom-ui)**
 
 ---
 
-## Surfaces in motion
+![Bloom hero — split landing with glass panel and feature rail](./screenshot.png)
 
-### Generation
+Bloom is a **UI / UX–only study**: a multi-route shell themed around botanical imagery and liquid-glass chrome. The focus is **hierarchy and rhythm**—serif/sans contrast, frosted surfaces, full-bleed video, and route-aware motion—not a production backend. **No live models or data layer**; scope is explicit in the on-screen badge.
+
+---
+
+## Interface
+
+High-fidelity captures from the build. Each route is intended to read as one **vertical story**: ingress → focal controls or media → closure.
+
+### Generation — editorial two-column
 
 ![Generation — composition & controls](./docs/generation.png)
 
-A two-column **editorial layout**: primary copy and controls on one side, a tall **canvas of attention** on the other. The rhythm is *prompt → parameters → action*—clear focal path, generous radii, and glass panels that sit **above** the world instead of fighting it.
+**Design intent:** Controls and copy live in a **left rail**; the right column is a tall **preview canvas** kept intentionally quiet until content would appear. Style and aspect ratio sit in paired glass cells so the eye moves *prompt → parameters → action* in one pass.
 
-### Gallery
+### Gallery — responsive grid
 
 ![Gallery — grid & card language](./docs/gallery.png)
 
-**Density without noise**: a responsive grid, cards that breathe, labels anchored in the corner system. This is **browsing UX** as craft—how the eye moves row to row when everything shares the same visual weight class.
+**Design intent:** Uniform cards with **shared corner geometry** so the grid reads as a system, not a collection of one-offs. Labels and icon affordances anchor to the same baseline from row to row.
 
-### Structures
+### Structures — viewer chrome
 
-![Structures — viewer chrome](./docs/structures.png)
+![Structures — floating controls over media](./docs/structures.png)
 
-**Viewer chrome**: instructions, hierarchy around the “stage,” and a bottom bar that reads like **instrumentation**—filename, affordance, download. Spatial storytelling for a tool that *feels* spatial even in the browser.
+**Design intent:** **Spatial UI copy** (rotate, zoom) and a bottom **instrumentation bar** (file name, download) frame a full-bleed plate—tool-like without embedding a real 3D runtime.
 
 ---
 
-## What this repo exercises (front end)
+## What this work demonstrates
 
-- **Visual language** — frosted glass, edge light, dark-base contrast, botanical–celestial mood without clipart cliché.
-- **Component architecture** — reusable primitives (`GlassPanel`, `IconCircle`, `PageShell`, `PageHeader`, `FeatureCard`) with typed props; pages compose, not duplicate.
-- **Motion as UX** — route-aware background blur; transitions that respect **AnimatePresence** and reading order.
-- **Information design** — each route is a **self-contained chapter**: hero, ingress, internal rhythm.
-- **Responsive posture** — layouts that scale from immersive desktop splits to narrower viewports without collapsing hierarchy.
-- **Shipping** — static host–ready build, sensible `base` path, SPA fallback for deep links.
+- **Structure:** `components/layout` (PageShell, PageHeader) · `components/ui` (GlassPanel, IconCircle, NavPill, FeatureCard, ConceptBadge) · pages composed from primitives
+- **Routing:** React Router **v7** with `basename` from `import.meta.env.BASE_URL` for GitHub Pages
+- **Motion:** `AnimatePresence` + route enter/exit blur; background video blur tied to `useLocation`
+- **Styling:** Tailwind **v4**, `@theme` fonts (Poppins + Source Serif 4), liquid-glass utility layers
+- **Shipping:** CI to **`gh-pages`**, SPA **404** fallback for deep links, `public/.nojekyll`
 
 ---
 
 ## Project layout
 
 ```text
-bloom-ai/
-├── .github/workflows/      # GitHub Pages deploy
-├── public/
-├── scripts/                # SPA 404 fallback after build
-├── src/
-│   ├── components/
-│   │   ├── layout/         # PageShell, PageHeader
-│   │   ├── ui/             # GlassPanel, IconCircle, NavPill, FeatureCard, ConceptBadge
-│   │   └── index.ts        # barrel exports
-│   ├── pages/              # Home, Gallery, Generation, Structures
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── index.html
-├── vite.config.ts
-├── tsconfig.json
-├── docs/
-├── package.json
-├── screenshot.png
-└── README.md
+src/
+├── components/
+│   ├── index.ts
+│   ├── layout/          # PageShell, PageHeader
+│   └── ui/               # GlassPanel, IconCircle, NavPill, FeatureCard, ConceptBadge
+├── pages/                # Home, Gallery, Generation, Structures
+├── App.tsx
+├── main.tsx
+├── index.css
+└── vite-env.d.ts
+docs/
+├── generation.png
+├── gallery.png
+└── structures.png
+public/
+scripts/
+  copy-spa-fallback.mjs
+.github/workflows/
+  deploy-github-pages.yml
+screenshot.png
 ```
 
 ---
 
-## Stack — why these choices
+## Stack
 
-| Layer | Choice | Why |
-|--------|--------|-----|
-| UI runtime | [React 19](https://react.dev/) | Component model fits the glass-panel language — each surface is a composable `<GlassPanel>` with variant/radius props. |
-| Build | [Vite](https://vitejs.dev/) | Near-instant HMR during design iteration; trivial `base` path config for GitHub Pages. |
-| Styling | [Tailwind CSS v4](https://tailwindcss.com/) | Utility-first keeps the visual system co-located with markup; `@theme` tokens enforce a single type + radius scale. |
-| Routing | [React Router](https://reactrouter.com/) | `useLocation` drives both route transitions and the background-blur choreography in one place. |
-| Motion | [Motion](https://motion.dev/) | `AnimatePresence` + blur/opacity keyframes give routes a spatial feel without a page reload. |
-| Icons | [Lucide React](https://lucide.dev/) | Tree-shakeable, consistent 24 × 24 stroke set that matches the thin-line aesthetic. |
+| Layer | Choice | Rationale |
+| --- | --- | --- |
+| Build | **Vite** | Fast feedback; static output and a single `base` switch for GitHub Pages. |
+| UI | **React 19** | Composable surfaces map cleanly to `GlassPanel` variants and typed props. |
+| Styling | **Tailwind CSS v4** | Utilities keep layout and theme co-located; one scale for spacing and radius. |
+| Motion | **Motion** | One API for route transitions without full page reloads. |
+| Router | **React Router v7** | Client routes with a base path that matches the repo slug on Pages. |
+| Icons | **lucide-react** | Thin strokes aligned to the glass chrome. |
 
 ---
 
 ## License
 
-MIT.
+MIT — see [LICENSE](LICENSE).

@@ -8,7 +8,7 @@ export default function Generation() {
   return (
     <PageShell className="flex flex-col">
       <GlassPanel variant="strong" className="flex-1 w-full max-w-6xl mx-auto flex flex-col p-6 lg:p-10">
-        <PageHeader title="AI" titleAccent="Generation" />
+        <PageHeader title="Studio" titleAccent="Generation" />
 
         <div className="flex flex-col lg:flex-row gap-8 flex-1">
           {/* Controls */}
